@@ -35,3 +35,4 @@ Desktop.ini
 # Ignorer les fichiers de sauvegarde de Vim
 *.swp
 /logs/
+/models/
