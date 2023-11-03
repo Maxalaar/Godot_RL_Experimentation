@@ -11,6 +11,7 @@ if __name__ == '__main__':
     model = A2C("MultiInputPolicy", env, verbose=1)
     model.learn(total_timesteps=10_000)
 
+
     # vec_env = model.get_env()
     # obs = vec_env.reset()
     # for i in range(1000):
