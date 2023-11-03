@@ -21,7 +21,7 @@ conda activate Godot_RL_Experimentation
 To run `gdrl` with the specified environment and experiment name using Stable-Baselines3, use the following command:
 
 ```shell
-gdrl --env=gdrl --env_path=environments/JumperHard/bin/JumperHard.x86_64 --experiment_name=Experiment_01 --viz
+gdrl --env=gdrl --env_path=environments/RingPong/bin/RingPong.x86_64 --experiment_name=Experiment_01 --viz
 ```
 
 Or you can use the following command to execute the Python file :
@@ -35,7 +35,7 @@ python executables/sb3_main.py
 To run `gdrl` with RLlib as the trainer, use the following command:
 
 ```shell
-gdrl --trainer=rllib --env=gdrl --env_path=environments/JumperHard/bin/JumperHard.x86_64 --experiment_name=Experiment_01 --viz
+gdrl --trainer=rllib --env=gdrl --env_path=environments/RingPong/bin/RingPong.x86_64 --experiment_name=Experiment_01 --viz
 ```
 
 Or you can use the following command to execute the Python file:
