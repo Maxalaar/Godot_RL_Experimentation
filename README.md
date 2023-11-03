@@ -1,5 +1,7 @@
 # Instructions for Running gdrl with RLLib and Stable-Baselines3
 
+Project aimed at allowing easy testing of Godot RL Agent with small, simple usage cases (currently, the entire RLlib part is not working).
+
 ## Creating and Activating a Conda Environment
 
 The first step is to create the Conda environment by executing the following command (The command may take several minutes to finish executing):
