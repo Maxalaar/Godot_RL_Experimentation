@@ -1,0 +1,36 @@
+# Ignorer les fichiers et dossiers spécifiques à PyCharm
+.idea/
+
+# Ignorer les fichiers .pyc générés par Python
+*.pyc
+
+# Ignorer les fichiers générés par l'installation de packages Python
+__pycache__/
+
+# Ignorer le répertoire virtuelenv (s'il est utilisé)
+venv/
+
+# Ignorer les fichiers de sauvegarde de PyCharm
+*.iml
+*.iws
+*.ipr
+
+# Ignorer les journaux de débogage de PyCharm
+*.log
+
+# Ignorer les fichiers de configuration utilisateur de PyCharm
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries/
+.idea/shelf/
+.idea/caches/
+
+# Ignorer les fichiers .DS_Store spécifiques à macOS
+.DS_Store
+
+# Ignorer les fichiers de sauvegarde de Windows
+Thumbs.db
+Desktop.ini
+
+# Ignorer les fichiers de sauvegarde de Vim
+*.swp
