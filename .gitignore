@@ -36,3 +36,4 @@ Desktop.ini
 *.swp
 /logs/
 /models/
+/ray_results/
