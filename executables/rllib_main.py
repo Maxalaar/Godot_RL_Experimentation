@@ -16,7 +16,7 @@ if __name__ == '__main__':
         env_creator=lambda env_ctx: RayVectorGodotEnv(
             env_path='environments/RingPong/bin/RingPong.x86_64',
             port=port + random.randint(1, 100),
-            speedup=10,
+            speedup=60,
         )
     )
 
@@ -24,7 +24,7 @@ if __name__ == '__main__':
         PPOConfig()
         .environment(env="RingPong")
         # .environment("Taxi-v3")
-        .rollouts(num_rollout_workers=2)
+        .rollouts(num_rollout_workers=4)
         .framework("torch")
         .training(model={"fcnet_hiddens": [64, 64]})
         .evaluation(evaluation_num_workers=1)
@@ -33,8 +33,8 @@ if __name__ == '__main__':
     stop = {
         # "training_iteration": args.stop_iters,
         # "timesteps_total": args.stop_timesteps,
-        'time_total_s': 60 * 1,
         # "episode_reward_mean": args.stop_reward,
+        'time_total_s': 60 * 5,
     }
 
     tuner = tune.Tuner(
@@ -48,12 +48,6 @@ if __name__ == '__main__':
     )
     results = tuner.fit()
 
-    # algo = config.build(use_copy=False)
-    #
-    # for _ in range(5):
-    #     print(algo.train())
-    #
-    # print(algo.evaluate())
     end_time = time.time()
     elapsed_time_seconds = end_time - start_time
     elapsed_time_minutes = elapsed_time_seconds / 60
